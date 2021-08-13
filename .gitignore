@@ -3,3 +3,4 @@
 .ssh-config
 .vagrant
 ansible.cfg
+.etc-hosts.yml
