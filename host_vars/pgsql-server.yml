@@ -1,0 +1,4 @@
+---
+
+pgsql_server: true
+pgsql_superuser_password: 'super-secret'

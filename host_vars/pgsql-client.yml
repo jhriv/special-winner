@@ -1,0 +1,6 @@
+---
+
+pgsql_host: 'pgsql-server'
+pgsql_user: 'db_user'
+pgsql_pass: 'secret'
+pgsql_name: 'db_name'

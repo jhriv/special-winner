@@ -1,0 +1,9 @@
+---
+
+- name: "Install PostgreSQL: The World's Most Advanced Open Source Relational Database"
+  hosts: pgsql
+
+  roles:
+    - name: 'uclalib_role_postgresql'
+
+
