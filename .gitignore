@@ -4,3 +4,4 @@
 .vagrant
 ansible.cfg
 .etc-hosts.yml
+roles/
