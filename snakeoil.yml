@@ -1,0 +1,28 @@
+---
+
+- name: Generate Snakeoil SSL Certificate
+  hosts: '*-server'
+
+  vars:
+    tlsroot: /etc/pki/tls
+    key: private/localhost.key
+    crt: certs/localhost.crt
+    keysize: '2048'
+    days: '365'
+
+  tasks:
+    - name: Generate Key
+      command: 
+        cmd: >
+          /usr/bin/openssl
+            req
+            -newkey rsa:{{ keysize }}
+            -keyout '{{ tlsroot }}/{{ key }}'
+            -out '{{ tlsroot }}/{{ crt }}'
+            -nodes
+            -x509
+            -days '{{ days }}'
+            -subj '/C=--/ST=SomeState/L=SomeCity/O=SomeOrganization/OU=SomeOrganizationalUnit/CN=localhost.localdomain/emailAddress=root@localhost.localdomain'
+      args:
+        creates: '{{ tlsroot }}/{{ key }}'
+      become: true
