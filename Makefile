@@ -122,7 +122,7 @@ python: ansible.cfg
 			     sudo apt-get install --assume-yes python python-apt ) \
 			|| true'
 
-roles: $(wildcard roles.yml config/roles.yml)
+roles: $(wildcard requirements.yml config/requirements.yml)
 	@echo 'Downloading roles'
 	@ansible-galaxy install --role-file=$< --roles-path='$(ROLES_PATH)'
 
