@@ -12,7 +12,7 @@
 
   tasks:
     - name: Generate Key
-      command: 
+      command:
         cmd: >
           /usr/bin/openssl
             req
@@ -25,4 +25,12 @@
             -subj '/C=--/ST=SomeState/L=SomeCity/O=SomeOrganization/OU=SomeOrganizationalUnit/CN=localhost.localdomain/emailAddress=root@localhost.localdomain'
       args:
         creates: '{{ tlsroot }}/{{ key }}'
+      become: true
+
+    - name: Fix permissions
+      file:
+        path: '{{ tlsroot }}/{{ key }}'
+        mode: '0600'
+        owner: postgres
+        group: postgres
       become: true
