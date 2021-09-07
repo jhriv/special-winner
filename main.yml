@@ -5,5 +5,3 @@
 
   roles:
     - name: 'uclalib_role_postgresql'
-
-
