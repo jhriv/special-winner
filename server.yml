@@ -1,0 +1,8 @@
+---
+
+- name: Install Postgres Server
+  hosts: '*-server'
+
+  roles:
+    - name: uclalib_role_postgresql
+      become: true
