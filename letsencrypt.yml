@@ -1,7 +1,0 @@
----
-
-- name: Install Let's Encrypt certificate (staging)
-  hosts: '*-server'
-
-  vars:
-    acme_server_name: acme-staging-v02.api.letsencrypt.org
