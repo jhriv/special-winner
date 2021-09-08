@@ -2,3 +2,9 @@
 
 pgsql_server: true
 pgsql_superuser_password: 'super-secret'
+pgsql_replicator_password: 'super-DUPER-secret'
+
+# pgsql_key_file: /etc/pki/tls/private/localhost.key
+# pgsql_cert_file: /etc/pki/tls/certs/localhost.crt
+pgsql_key_file: localhost.key
+pgsql_cert_file: localhost.crt

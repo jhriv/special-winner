@@ -6,6 +6,7 @@
 GUESTS = [
   { name: 'pgsql-server', box: 'centos/7', ip: 'dhcp', },
   { name: 'pgsql-client', box: 'centos/7', ip: 'dhcp', },
+  { name: 'pgsql-backup', box: 'centos/7', ip: 'dhcp', },
   #{ name: 'web-1', box: 'centos/7', ip: '2' },
   #{ name: 'web-2', ip: '192.168.1.3' },
   #{ name: 'db-1' },
