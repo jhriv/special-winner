@@ -1,0 +1,8 @@
+---
+
+- name: Install Postgres Server
+  hosts: '*-server:*-backup'
+
+  roles:
+    - name: uclalib_role_postgresql-legacy
+      become: true
